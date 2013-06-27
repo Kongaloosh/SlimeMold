@@ -8,6 +8,7 @@ import info.gridworld.actor.Rock;
 import info.gridworld.grid.BoundedGrid;
 import info.gridworld.grid.Location;
 import info.gridworld.world.World;
+import java.util.ArrayList;
 
 /**
  *
@@ -64,4 +65,9 @@ public class SlimeMoldModel {
         boundedGrid.put(new Location(3,4), new Rock());
        boundedGrid.put(new Location(1,3), new Rock());
     }
+  
+    public ArrayList<SlimeMold> generateSlime(){
+        return new ArrayList
+    }
+
 }

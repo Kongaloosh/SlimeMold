@@ -23,7 +23,7 @@
  *  - Change image instantiation ------------------------------------ [ ]
  *  - Add formulae for actions -------------------------------------- [ ]
  *  - Multiple actors on grid --------------------------------------- [ ]
- * 
+ *  - method that grnerates the nucli and structure to build safely - [ ]
  */
 
 package slimemoldmodel;
@@ -33,7 +33,13 @@ import java.math.MathContext;
 
 public class SlimeMold extends Actor {
 
+    private int startNode;
+    private int endNode;
     
+    public SlimeMold( int startNode, int endNode ){
+        this.startNode = startNode;
+        this.endNode = endNode;
+    }
     
     @Override
     public void act() {
@@ -44,5 +50,15 @@ public class SlimeMold extends Actor {
         
         //act
     }
+    
+    public void returnFlux(){
+        
+    }
+    
+    public void returnConductuvity(){
+        
+    }
+    
+    
       
 }
