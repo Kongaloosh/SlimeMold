@@ -48,7 +48,17 @@ import info.gridworld.actor.Actor;
 import java.math.MathContext;
 
 public class SlimeMold extends Actor {
-
+    /*
+     * PHYSICAL LAWS:
+     * 
+     *  - sum Q_ij = 0 where j =/= 1,2
+     * 
+     *  For source nodes + flux = 0
+     *  for sing node - flux = 0
+     *  
+     *  I_0 = slux from source to sink
+     * \
+     */
     private int startNode;
     private int endNode;
     
@@ -66,15 +76,32 @@ public class SlimeMold extends Actor {
         
         //act
     }
-    
-    public void returnFlux(){
-        
+   
+    public void returnFlux()
+    {
+       /* Flux definition
+        * 
+        *  Q_ij = [(pi)*(a^4_ij) / (8k)] * [(p_i-p_j)/(L_ij)]
+        *  Q_ij: flux through connection of node i and j
+        *  L_ij: Length connecting tube
+        *  a_ij: radius of tube
+        *  k   : viscosity coefficient 
+        *  pi/pj: pressure at node i/j
+        */ 
+    }
+   
+    public void changeInConductivity( ){
+        /*
+         * D_ij  = f(|Q_ij|) - r D_ij
+         * 
+         * r is the decay
+         * f is a monotonically increasing continuous function, intercepts with
+         * origin
+         */
     }
     
     public void returnConductuvity(){
         
     }
-    
-    
-      
+   
 }
